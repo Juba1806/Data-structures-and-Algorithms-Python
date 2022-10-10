@@ -7,10 +7,12 @@ class Stack:
         return data 
     
     def pop(self): 
-        return self.elements.pop() 
+        if len(self.elements) > 0:
+            return self.elements.pop() 
         
     def peek(self): 
-        return self.elements[-1] 
+        if len(self.elements) > 0:
+            return self.elements[-1] 
         
     def is_empty(self): 
         return len(self.elements) == 0
